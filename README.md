@@ -1,6 +1,9 @@
 # Dyma: Your Dynalist Manager
+![Static Badge](https://img.shields.io/badge/license-MIT-brightgreen?style=plastic)
+![Static Badge](https://img.shields.io/badge/language-Python%3E%3D3.9-blue?style=plastic)
+![Static Badge](https://img.shields.io/badge/version-0.1.0-blue?style=plastic)
 
-Note: this project is in very early stage. Major changes could happen and cause conflict with current usage. 
+Note: This project is in very early stage. Major changes could happen and cause conflict with current usage. 
 
 ## Features
 
