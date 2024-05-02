@@ -1,8 +1,13 @@
 import requests
+import logging
 
 from .dymaAction import FileEdit, FileFetchAll, FileMove, FileCreate
 from .dymaAction import DocGet, DocCheck, DocInsert, DocEdit, DocMove, DocDelete
 from .dymaAction import SendToInbox, Upload, GetPreference, SetPreference
+
+
+logger = logging.getLogger(__name__)
+
 
 class FileHandler:
     def __init__(self, token):
@@ -26,7 +31,7 @@ class FileHandler:
             'token': self.token
         }
         json_data = json_data | action.act(**kwargs)
-        print(f"{json_data=}")
+        logger.debug(f"{json_data=}")
         results = requests.post(action.post_url, json=json_data)
         return results
     
@@ -70,7 +75,7 @@ class DocHandler:
             'token': self.token
         }
         json_data = json_data | action.act(**kwargs)
-        print(f"{json_data=}")
+        logger.debug(f"{json_data=}")
         results = requests.post(action.post_url, json=json_data)
         return results
 
@@ -120,7 +125,7 @@ class AccountHandler:
             'token': self.token
         }
         json_data = json_data | action.act(**kwargs)
-        print(f"{json_data=}")
+        logger.debug(f"{json_data=}")
         results = requests.post(action.post_url, json=json_data)
         return results
     
